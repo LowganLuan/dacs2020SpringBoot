@@ -1,6 +1,6 @@
 package br.univille.dacs2020.model;
 
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
 
@@ -30,9 +30,9 @@ public class Consulta {
     @JoinColumn(name="paciente",nullable=false, foreignKey = @ForeignKey(name="fk_paciente"))
     private Paciente paciente;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "Consulta_id", foreignKey = @ForeignKey(name = "fk_consulta"))
-    private List<ProcedimentoRealizado> listaProcedimentos = new ArrayList();
+    private List<ProcedimentoRealizado> listaProcedimentos;
 
     public long getId() {
         return id;
