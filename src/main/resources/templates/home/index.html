@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-    <head>
-      <h1>Olha só</h1>
-    </head>
+
+    <head th:include="layout :: htmlhead"></head>
     <body>
-      <strong th:text="${dataatualizada}"></strong>
+      <div class="container">
+        <nav th:replace="layout :: menu">(menu)</nav>
+        <strong th:text="${dataatualizada}"></strong>
+      </div>
+      <div th:include="layout :: footer" id="footer">(footer)</div>
     </body>
 </html> 

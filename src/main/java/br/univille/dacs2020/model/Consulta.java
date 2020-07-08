@@ -34,6 +34,7 @@ public class Consulta {
     @JoinColumn(name = "Consulta_id", foreignKey = @ForeignKey(name = "fk_consulta"))
     private List<ProcedimentoRealizado> listaProcedimentos;
 
+    
     public long getId() {
         return id;
     }
