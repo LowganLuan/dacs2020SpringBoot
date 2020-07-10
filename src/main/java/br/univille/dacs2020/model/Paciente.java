@@ -12,7 +12,7 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class Paciente {
-    @Id
+    @Id 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(length = 1000, nullable = false)
